@@ -8,8 +8,8 @@ ThomasKerman:
 	Parts: Ariane_Main; Ariane_Second; Ariane_Fairing_new; GSA-MultiHub;; GSA-ScienceBox; GSA-ScienceEngine; 			GSA-ScienceRack;
 
 runner78: 
-  Plugins: Durability; Storage Container;
-  Parts: GSA-PA01-MK-I; GSA-SC01-MK-I; GSA-SPLAP-T3;
+  Plugins: Durability;
+  Parts: GSA-PA01-MK-I; GSA-SC01-MK-I; GSA-SPLAP-T3; GSA-NODE-T3;
   
 JebediahKerman:
 	Parts: Merlin 1D; Falcon 9 MainTank;
