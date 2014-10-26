@@ -1,0 +1,11 @@
+So Leute,
+Ich hab mal ne Datei erstellt damit wir hier mal so reinschreiben können was noch wo zu tun ist. Außerdem können wir hier Pläne für die Mod teilen. Ja ich weiß das geht auch über den IRC,
+aber hier kann das jeder immer sehen von uns.
+
+Das Kühlungsplugin:
+-Man hat radiatoren un Kühlleitungen (???)
+-Man hat Heizungen (???)
+-Nen bemanntes Raumschiff sollte ca 20°C warm sein (???)
+-Heizungen wärmen Radiotorn kühlen(???)
+
+Hab mal ne Runde gebrainstormt
