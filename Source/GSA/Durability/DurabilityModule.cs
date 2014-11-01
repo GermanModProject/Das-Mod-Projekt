@@ -1,4 +1,20 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+//
+//    Durability a plugin for Kerbal Space Program from SQUAD
+//    (https://www.kerbalspaceprogram.com/)
+//    and part of GSA Mod
+//    (http://www.kerbalspaceprogram.de)
+//
+//    Author: runner78
+//    Copyright (c) 2014 runner78
+//
+//    This program, coding and graphics are provided under the following Creative Commons license.
+//    Attribution-NonCommercial 3.0 Unported
+//    https://creativecommons.org/licenses/by-nc/3.0/
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +31,7 @@ namespace GSA.Durability
                 {
                     foreach (UIPartActionWindow window in FindObjectsOfType(typeof(UIPartActionWindow)))
                     {
-                        if (window.part == part) _myWindow = window;
+                        if (window.part == part) _myWindow = window;                     
                     }
                 }
                 return _myWindow;
@@ -176,19 +192,19 @@ namespace GSA.Durability
         private bool _isInit = false;
         private bool _isFirst = true;
         private int _countUpdates = 0;
-        private PartModule _deadlyReentry = null;
         private double _displayDurability;
         private double _lastUpdateTime = 0;
         private bool _expDeployed = false;
-        private StartState _state;
         private float _initCost;
         private float _currentWear;
+        private double _finalReduce = 0;
+        private StartState _state;
         private ModuleCommand _command = null;
         private ModuleReactionWheel _reactionWheel = null;
         private ModuleEngines _engine = null;
         private CelestialBody _sun = null;
         private ModuleScienceExperiment _scienceExperiment = null;
-        private double _finalReduce = 0;
+        private PartModule _deadlyReentry = null;
 
         #endregion //Private Fields
 
@@ -202,12 +218,12 @@ namespace GSA.Durability
             if (part.Resources.Contains("Durability"))
             {
                 double difference = part.Resources["Durability"].maxAmount - part.Resources["Durability"].amount;
-                GSA.Durability.Debug.Log("KspDeMod [RepairDamage]: Start Repair (" + difference.ToString("0.0000") + ")");
+                GSA.Durability.Debug.Log("GSA Durability: [RepairDamage]: Start Repair (" + difference.ToString("0.0000") + ")");
                 if (difference > 0)
                 {
                     part.Resources["Durability"].amount = part.Resources["Durability"].maxAmount;
                     double differenceP = difference / part.Resources["Durability"].maxAmount;
-                    GSA.Durability.Debug.Log("KspDeMod [RepairDamage]: Repair differenceP (" + differenceP.ToString("0.0000") + ")");
+                    GSA.Durability.Debug.Log("GSA Durability: [RepairDamage]: Repair differenceP (" + differenceP.ToString("0.0000") + ")");
                     quality -= repairQualityReducer * differenceP;
                     if (maxRepair > 0)
                     {
@@ -226,7 +242,7 @@ namespace GSA.Durability
             }
             else
             {
-                GSA.Durability.Debug.Log("KspDeMod [RepairDamage]: Resource Durability not Found");
+                GSA.Durability.Debug.Log("GSA Durability: [RepairDamage]: Resource Durability not Found");
             }
             setEventLabel();
             if (myWindow != null)
@@ -789,15 +805,15 @@ namespace GSA.Durability
             try
             {
                 double GeeForceMutli = 1;
-                /*if (vessel.geeForce > 1 && vessel.geeForce < 9)
+                if (vessel.geeForce > 1 && vessel.geeForce < 17)
                 {
-                    GeeForceMutli = (vessel.geeForce * vessel.geeForce);
+                    GeeForceMutli = Math.Pow(vessel.geeForce / 2, vessel.geeForce / 2.2);
                 }
-                else if (vessel.geeForce >= 9)
+                else if (vessel.geeForce >= 17)
                 {
-                    GeeForceMutli = ((vessel.geeForce * vessel.geeForce) * 2);
-                }*/
-                GeeForceMutli = Math.Pow(vessel.geeForce / 2, vessel.geeForce / 2.2);
+                    GeeForceMutli = Math.Pow(17 / 2, 17 / 2.2);
+                }
+                //GeeForceMutli = Math.Pow(vessel.geeForce / 2, vessel.geeForce / 2.2);
                 GeeForceMutli = (GeeForceMutli > 1) ? GeeForceMutli : 1;
                 additionalReduce += (_currentWear * GeeForceMutli) - _currentWear;
                 displayGeeForce = GeeForceMutli.ToString("0.0000");

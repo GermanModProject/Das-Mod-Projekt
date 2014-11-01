@@ -1,4 +1,20 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////////////
+//
+//    Durability a plugin for Kerbal Space Program from SQUAD
+//    (https://www.kerbalspaceprogram.com/)
+//    and part of GSA Mod
+//    (http://www.kerbalspaceprogram.de)
+//
+//    Author: runner78
+//    Copyright (c) 2014 runner78
+//
+//    This program, coding and graphics are provided under the following Creative Commons license.
+//    Attribution-NonCommercial 3.0 Unported
+//    https://creativecommons.org/licenses/by-nc/3.0/
+//
+///////////////////////////////////////////////////////////////////////////////
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
