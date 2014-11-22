@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ProcessingPower
 {
-    class Display : PartModule
+	class Display : MonoBehaviour
     {
         private static Rect windowposition = new Rect(100, 100, 200, 200);
         private static GUIStyle windowStyle = null;
