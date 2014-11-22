@@ -3,14 +3,14 @@ GermanSpaceAlliance
 
 Copyrights:
 
-ThomasKerman: 
+Thomas P. Kerman: 
 	Parts: Ariane_Main; Ariane_Fairing_new; GSA-MultiHub;; GSA-ScienceBox; GSA-ScienceEngine; GSA-ScienceRack; CrewATV LandingLeg, CrewATV Heatshield, CrewATV MainModule
 
 runner78: 
   Plugins: Durability;
   Parts: GSA-PA01-MK-I; GSA-SC01-MK-I; GSA-SPLAP-T3; GSA-NODE-T3;
   
-JebediahKerman:
+Jebediah Kerman:
 	Parts: Merlin 1D; Falcon 9 MainTank;
 	
 Fr3aKyHDx:
