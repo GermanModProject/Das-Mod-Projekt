@@ -1,0 +1,6 @@
+C:\Users\Dorian\Documents\GitHub\GSA\Source\GSA\ProcessingPower\obj\Debug\ProcessingPower.csprojResolveAssemblyReference.cache
+F:\Documents\GSA\Source\GSA\ProcessingPower\bin\Debug\ProcessingPower.dll
+F:\Documents\GSA\Source\GSA\ProcessingPower\bin\Debug\ProcessingPower.pdb
+F:\Documents\GSA\Source\GSA\ProcessingPower\obj\Debug\ProcessingPower.dll
+F:\Documents\GSA\Source\GSA\ProcessingPower\obj\Debug\ProcessingPower.pdb
+F:\Documents\GSA\Source\GSA\ProcessingPower\obj\Debug\ProcessingPower.csprojResolveAssemblyReference.cache
